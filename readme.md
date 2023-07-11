@@ -1,0 +1,1 @@
+Hello, this is a task to automate Strypes webpage from scratch.
