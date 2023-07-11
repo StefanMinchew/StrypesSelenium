@@ -1,0 +1,24 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Blog extends Base {
+
+    WebDriver driver;
+
+    public Blog(WebDriver driver){
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(css = "[data-id='3e84934e'] .elementor-widget-container")
+    WebElement backgroundTextLocator;
+
+    public Boolean getBackGroundTextLocator() {
+        return backgroundTextLocator.isDisplayed();
+    }
+
+}
