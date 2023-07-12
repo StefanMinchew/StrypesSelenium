@@ -167,6 +167,10 @@ public class Header {
         aboutButtonLocator.click();
     }
 
+    public void clickOnTheLogoButton() {
+        logoButtonLocator.click();
+    }
+
     public void hoverOverTheAboutButton() {
         aboutButtonLocator.click();
     }

@@ -9,7 +9,7 @@ public class SDaaS {
 
     WebDriver driver;
 
-    public SDaaS(WebDriver driver){
+    public SDaaS(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

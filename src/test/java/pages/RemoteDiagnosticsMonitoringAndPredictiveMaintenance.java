@@ -9,7 +9,7 @@ public class RemoteDiagnosticsMonitoringAndPredictiveMaintenance {
 
     WebDriver driver;
 
-    public RemoteDiagnosticsMonitoringAndPredictiveMaintenance(WebDriver driver){
+    public RemoteDiagnosticsMonitoringAndPredictiveMaintenance(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

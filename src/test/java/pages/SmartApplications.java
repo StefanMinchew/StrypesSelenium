@@ -9,7 +9,7 @@ public class SmartApplications {
 
     WebDriver driver;
 
-    public SmartApplications(WebDriver driver){
+    public SmartApplications(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

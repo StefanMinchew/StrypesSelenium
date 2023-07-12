@@ -1,8 +1,9 @@
 package pages;
 
-import managers.FileReaderManager;
+import managers.PageObjectManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,9 +11,7 @@ public class Homepage {
 
 
     WebDriver driver;
-
-    public String baseUrl = FileReaderManager.getInstance().getConfigReader().getApplicationUrl();
-    public String homePageUrl = baseUrl;
+    PageObjectManager pageObjectManager = new PageObjectManager(driver);
 
     public Homepage(WebDriver driver) {
         this.driver = driver;
@@ -49,52 +48,95 @@ public class Homepage {
     @FindBy(css = "[data-id='d3973af']")
     WebElement whoAreWeSectionLocator;
 
-    public Boolean elementorTopSectionIsDisplayed () {
+    @FindBy(css = "[data-swiper-slide-index='0']:nth-of-type(7) .elementor-slide-button")
+    WebElement topSectionLearnMoreButtonLocator;
+
+    @FindBy(css = "[data-id='9eedb11'] .elementor-button-text")
+    WebElement whoAreWeLearnMoreButtonLocator;
+
+    @FindBy(css = "[data-id='f8420fb'] [role]")
+    WebElement ourServicesLearnMoreButtonLocator;
+
+    @FindBy(css = "[data-id='0ee61bb'] [role]")
+    WebElement nearsuranceLearnMoreButtonLocator;
+
+    @FindBy(css = "[data-id='eb94daa'] [role]")
+    WebElement whatIsNewLearnMoreButtonLocator;
+
+    @FindBy(css = "[cta_dest_link]")
+    WebElement getInTouchButtonLocator;
+
+    public Boolean elementorTopSectionIsDisplayed() {
         return elementorTopSectionLocator.isDisplayed();
     }
 
-    public Boolean whoAreWeSectionLocatorIsDisplayed () {
+    public Boolean whoAreWeSectionLocatorIsDisplayed() {
         return whoAreWeSectionLocator.isDisplayed();
     }
 
-    public Boolean ourServicesSectionLocatorIsDisplayed () {
+    public Boolean ourServicesSectionLocatorIsDisplayed() {
         return ourServicesSectionLocator.isDisplayed();
     }
 
-    public Boolean softwareSolutionsSectionLocatorIsDisplayed () {
+    public Boolean softwareSolutionsSectionLocatorIsDisplayed() {
         return softwareSolutionsSectionLocator.isDisplayed();
     }
 
-    public Boolean nearsuranceSectionLocatorIsDisplayed () {
+    public Boolean nearsuranceSectionLocatorIsDisplayed() {
         return nearsuranceSectionLocator.isDisplayed();
     }
 
-    public Boolean statisticsSectionLocatorIsDisplayed () {
+    public Boolean statisticsSectionLocatorIsDisplayed() {
         return statisticsSectionLocator.isDisplayed();
     }
 
-    public Boolean partnersSectionLocatorIsDisplayed () {
+    public Boolean partnersSectionLocatorIsDisplayed() {
         return partnersSectionLocator.isDisplayed();
     }
 
-    public Boolean whatIsNewSectionLocatorIsDisplayed () {
+    public Boolean whatIsNewSectionLocatorIsDisplayed() {
         return whatIsNewSectionLocator.isDisplayed();
     }
 
-    public Boolean learnMoreSectionLocatorIsDisplayed () {
+    public Boolean learnMoreSectionLocatorIsDisplayed() {
         return learnMoreSectionLocator.isDisplayed();
     }
 
-    public Boolean certificationsSectionIsDisplayed () {
+    public Boolean certificationsSectionIsDisplayed() {
         return certificationsSectionLocator.isDisplayed();
     }
 
     public void navigateToHomepage() {
-        driver.get(homePageUrl);
+        driver.get(pageObjectManager.getHomePageUrl());
     }
 
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
+    }
+
+    public void clickOnTheTopSectionLearnMoreButton() {
+        Actions actions = new Actions(driver);
+        actions.moveToElement(topSectionLearnMoreButtonLocator).click().perform();
+    }
+
+    public void clickOnTheWhoAreWeLearnMoreButton() {
+        whoAreWeLearnMoreButtonLocator.click();
+    }
+
+    public void clickOnTheOurServicesLearnMoreButton() {
+        ourServicesLearnMoreButtonLocator.click();
+    }
+
+    public void clickOnTheNearsuranceLearnMoreButton() {
+        nearsuranceLearnMoreButtonLocator.click();
+    }
+
+    public void clickOnTheWhatIsNewLearnMoreButton() {
+        whatIsNewLearnMoreButtonLocator.click();
+    }
+
+    public void clickOnTheGetInTouchButton() {
+        getInTouchButtonLocator.click();
     }
 
 }

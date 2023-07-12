@@ -9,7 +9,7 @@ public class DevOps {
 
     WebDriver driver;
 
-    public DevOps(WebDriver driver){
+    public DevOps(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

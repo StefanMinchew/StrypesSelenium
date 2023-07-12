@@ -9,7 +9,7 @@ public class Nearsurance {
 
     WebDriver driver;
 
-    public Nearsurance(WebDriver driver){
+    public Nearsurance(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

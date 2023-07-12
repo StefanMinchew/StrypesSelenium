@@ -9,7 +9,7 @@ public class ModularityServices {
 
     WebDriver driver;
 
-    public ModularityServices(WebDriver driver){
+    public ModularityServices(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

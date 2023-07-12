@@ -9,7 +9,7 @@ public class About {
 
     WebDriver driver;
 
-    public About(WebDriver driver){
+    public About(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

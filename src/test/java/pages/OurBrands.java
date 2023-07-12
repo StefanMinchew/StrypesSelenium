@@ -9,7 +9,7 @@ public class OurBrands {
 
     WebDriver driver;
 
-    public OurBrands(WebDriver driver){
+    public OurBrands(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

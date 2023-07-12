@@ -9,7 +9,7 @@ public class ApplicationDevelopment {
 
     WebDriver driver;
 
-    public ApplicationDevelopment(WebDriver driver){
+    public ApplicationDevelopment(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

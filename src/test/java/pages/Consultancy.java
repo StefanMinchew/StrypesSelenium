@@ -9,7 +9,7 @@ public class Consultancy {
 
     WebDriver driver;
 
-    public Consultancy(WebDriver driver){
+    public Consultancy(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

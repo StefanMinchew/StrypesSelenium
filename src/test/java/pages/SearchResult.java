@@ -7,7 +7,7 @@ public class SearchResult {
 
     WebDriver driver;
 
-    public SearchResult(WebDriver driver){
+    public SearchResult(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

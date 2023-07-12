@@ -9,7 +9,7 @@ public class ApplicationModernization {
 
     WebDriver driver;
 
-    public ApplicationModernization(WebDriver driver){
+    public ApplicationModernization(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

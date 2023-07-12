@@ -77,9 +77,7 @@ public class headerStepDefinitions {
     public void john_is_on_the_home_page() {
         homePage.navigateToHomepage();
         String currentUrl = homePage.getCurrentUrl();
-        Assertions.assertEquals(homePage.homePageUrl, currentUrl);
-        System.out.println(currentUrl);
-        System.out.println(homePage.homePageUrl);
+        Assertions.assertEquals(testContext.getPageObjectManager().getHomePageUrl(), currentUrl);
     }
 
     @When("he clicks on the about button")
@@ -626,6 +624,22 @@ public class headerStepDefinitions {
         String currentUrl = searchResult.getCurrentUrl();
         Assertions.assertEquals(testContext.getPageObjectManager().getSearchResultPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(header.searchMessageText().contains(testContext.getPageObjectManager().getSearchInput()));
+    }
+
+    @Given("John is already on the careers page")
+    public void john_is_already_on_the_careers_page() {
+        careers.navigateToCareersPage();
+    }
+
+    @When("he clicks on the logo button")
+    public void he_clicks_on_the_logo_button() {
+        header.clickOnTheLogoButton();
+    }
+
+    @Then("he should be redirected to the home page")
+    public void he_should_be_redirected_to_the_home_page() {
+        String currentUrl = homePage.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getHomePageUrl(), currentUrl);
     }
 
 }
