@@ -21,11 +21,11 @@ public class WebDriverManager {
     }
 
     public WebDriver getDriver() {
-        if(driver == null) driver = createDriver();
+        if (driver == null) driver = createDriver();
         return driver;
     }
 
-    private WebDriver createDriver(){
+    private WebDriver createDriver() {
         switch (environmentType) {
             case PROD -> driver = createProdDriver();
             case STAGE -> driver = createStageDriver();
@@ -42,7 +42,8 @@ public class WebDriverManager {
             case EDGE -> driver = new EdgeDriver();
             case SAFARI -> driver = new SafariDriver();
         }
-        if(FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize()) driver.manage().window().maximize();
+        if (FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize())
+            driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
         return driver;
     }
@@ -54,7 +55,8 @@ public class WebDriverManager {
             case EDGE -> driver = new EdgeDriver();
             case SAFARI -> driver = new SafariDriver();
         }
-        if(FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize()) driver.manage().window().maximize();
+        if (FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize())
+            driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
         return driver;
     }
@@ -66,7 +68,8 @@ public class WebDriverManager {
             case EDGE -> driver = new EdgeDriver();
             case SAFARI -> driver = new SafariDriver();
         }
-        if(FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize()) driver.manage().window().maximize();
+        if (FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize())
+            driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
         return driver;
     }
@@ -78,12 +81,13 @@ public class WebDriverManager {
             case EDGE -> driver = new EdgeDriver();
             case SAFARI -> driver = new SafariDriver();
         }
-        if(FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize()) driver.manage().window().maximize();
+        if (FileReaderManager.getInstance().getConfigReader().getBrowserWindowSize())
+            driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(FileReaderManager.getInstance().getConfigReader().getImplicitlyWait(), TimeUnit.SECONDS);
         return driver;
     }
 
-    public void closeDriver(){
+    public void closeDriver() {
         driver.close();
         driver.quit();
     }

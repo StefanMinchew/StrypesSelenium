@@ -184,8 +184,14 @@ Feature: Header tests
       | Success Stories |
 
   @Test @Regression
-    Scenario: Searching for something in the search window redirects to the search page with the appropriate search results
+  Scenario: Searching for something in the search window redirects to the search page with the appropriate search results
     When he clicks on the search button
     And he types something in the search input field
     And presses enter
     Then he should be redirected to the search page with the something results
+
+  @Test @Regression
+  Scenario: Header logo redirects to the home page
+    Given John is already on the careers page
+    When he clicks on the logo button
+    Then he should be redirected to the home page

@@ -9,7 +9,7 @@ public class Contact {
 
     WebDriver driver;
 
-    public Contact(WebDriver driver){
+    public Contact(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

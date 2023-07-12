@@ -9,7 +9,7 @@ public class SoftwareIntegrationAndFLaaS {
 
     WebDriver driver;
 
-    public SoftwareIntegrationAndFLaaS(WebDriver driver){
+    public SoftwareIntegrationAndFLaaS(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

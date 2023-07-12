@@ -9,7 +9,7 @@ public class OurPromises {
 
     WebDriver driver;
 
-    public OurPromises(WebDriver driver){
+    public OurPromises(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

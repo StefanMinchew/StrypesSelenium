@@ -9,7 +9,7 @@ public class SuccessStories {
 
     WebDriver driver;
 
-    public SuccessStories(WebDriver driver){
+    public SuccessStories(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

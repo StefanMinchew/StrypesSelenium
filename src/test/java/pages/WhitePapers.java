@@ -9,7 +9,7 @@ public class WhitePapers {
 
     WebDriver driver;
 
-    public WhitePapers(WebDriver driver){
+    public WhitePapers(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

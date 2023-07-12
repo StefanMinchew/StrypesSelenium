@@ -9,7 +9,7 @@ public class MobilityAndTransformation {
 
     WebDriver driver;
 
-    public MobilityAndTransformation(WebDriver driver){
+    public MobilityAndTransformation(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

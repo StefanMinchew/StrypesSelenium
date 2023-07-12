@@ -7,9 +7,10 @@ public class Hooks {
 
     TestContext testContext;
 
-    public Hooks (TestContext context){
+    public Hooks(TestContext context) {
         testContext = context;
     }
+
     @After
     public void tearDown() {
         testContext.getWebDriverManager().closeDriver();

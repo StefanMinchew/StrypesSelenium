@@ -9,7 +9,7 @@ public class DigitalTransformation {
 
     WebDriver driver;
 
-    public DigitalTransformation(WebDriver driver){
+    public DigitalTransformation(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

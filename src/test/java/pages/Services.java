@@ -9,7 +9,7 @@ public class Services {
 
     WebDriver driver;
 
-    public Services(WebDriver driver){
+    public Services(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

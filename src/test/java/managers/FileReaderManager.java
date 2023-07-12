@@ -1,6 +1,7 @@
 package managers;
 
 import dataProviders.ConfigFileReader;
+
 public class FileReaderManager {
 
     private static FileReaderManager fileReaderManager = new FileReaderManager();
@@ -9,7 +10,7 @@ public class FileReaderManager {
     private FileReaderManager() {
     }
 
-    public static FileReaderManager getInstance( ) {
+    public static FileReaderManager getInstance() {
         return fileReaderManager;
     }
 
