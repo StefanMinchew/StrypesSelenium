@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Contact extends Base {
+public class Contact {
 
     WebDriver driver;
 
@@ -19,6 +19,10 @@ public class Contact extends Base {
 
     public Boolean getBackGroundTextLocator() {
         return sendButtonLocator.isDisplayed();
+    }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
     }
 
 }

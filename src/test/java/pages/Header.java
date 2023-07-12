@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Header extends Base {
+public class Header {
 
     WebDriver driver;
 
@@ -105,6 +105,10 @@ public class Header extends Base {
 
     @FindBy(css = ".results-for .elementor-heading-title")
     WebElement searchResultsMessageLocator;
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
 
     public boolean logoIsDisplayed() {
         return logoButtonLocator.isDisplayed();
