@@ -4,10 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c7f27f1-e42e-4f81-826c-5bf42eaae9de" name="Changes" comment="Finish header tests">
+    <list default="true" id="5c7f27f1-e42e-4f81-826c-5bf42eaae9de" name="Changes" comment="Refactored code and added first homepage tests">
+      <change afterPath="$PROJECT_DIR$/configs/Configuration.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/cucumberHelper/TestContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataProviders/ConfigFileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/enums/DriverType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/enums/EnvironmentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/managers/FileReaderManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/managers/PageObjectManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/managers/WebDriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/Homepage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/SearchResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/homepageStepDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/homepage.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/About.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/About.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AboutICTGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AboutICTGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ApplicationDevelopment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ApplicationDevelopment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ApplicationManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ApplicationManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ApplicationModernization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ApplicationModernization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Careers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Careers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Consultancy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Consultancy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DevOps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DevOps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DigitalTransformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DigitalTransformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ITInfrastructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ITInfrastructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MobilityAndTransformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MobilityAndTransformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ModularityServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ModularityServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Nearsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Nearsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OurBrands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OurBrands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OurLeadership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OurLeadership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OurPromises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OurPromises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RemoteDiagnosticsMonitoringAndPredictiveMaintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RemoteDiagnosticsMonitoringAndPredictiveMaintenance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Resources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Resources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SDaaS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SDaaS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SmartApplications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SmartApplications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SoftwareIntegrationAndFLaaS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SoftwareIntegrationAndFLaaS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SuccessStories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SuccessStories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WhitePapers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WhitePapers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runner/CucumberRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/CucumberRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/headerStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/headerStepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/header.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/header.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,18 +66,24 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -127,6 +177,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
     <MESSAGE value="Finish header tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish header tests" />
+    <MESSAGE value="Refactored code and added first homepage tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored code and added first homepage tests" />
   </component>
 </project>

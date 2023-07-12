@@ -1,5 +1,5 @@
 @Header
-Feature: Header functionality
+Feature: Header tests
 
   Background:
     Given John is on the home page

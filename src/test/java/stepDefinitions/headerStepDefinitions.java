@@ -1,30 +1,85 @@
 package stepDefinitions;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
+import cucumberHelper.TestContext;
 import io.cucumber.java.en.*;
 import org.junit.jupiter.api.Assertions;
-import pages.Base;
+import pages.*;
 
-public class headerStepDefinitions extends Base {
+public class headerStepDefinitions {
 
-    @Before
-    public void setup() {
-        super.setup();
-    }
+    TestContext testContext;
+    Homepage homePage;
+    Header header;
+    About about;
+    OurBrands ourBrands;
+    OurPromises ourPromises;
+    OurLeadership ourLeadership;
+    DevOps devOps;
+    DigitalTransformation digitalTransformation;
+    MobilityAndTransformation mobilityAndTransformation;
+    RemoteDiagnosticsMonitoringAndPredictiveMaintenance remoteDiagnosticsMonitoringAndPredictiveMaintenance;
+    SDaaS sDaaS;
+    SoftwareIntegrationAndFLaaS softwareIntegrationAndFLaaS;
+    SmartApplications smartApplications;
+    ModularityServices modularityServices;
+    ITInfrastructure itInfrastructure;
+    Consultancy consultancy;
+    ApplicationModernization applicationModernization;
+    ApplicationManagement applicationManagement;
+    ApplicationDevelopment applicationDevelopment;
+    Services services;
+    Customers customers;
+    Nearsurance nearsurance;
+    Resources resources;
+    Blog blog;
+    WhitePapers whitePapers;
+    SuccessStories successStories;
+    Careers careers;
+    AboutICTGroup aboutICTGroup;
+    Contact contact;
+    SearchResult searchResult;
 
-    @After
-    public void tearDown() {
-        super.tearDown();
+    public headerStepDefinitions(TestContext context) {
+        testContext = context;
+        homePage = testContext.getPageObjectManager().getHomepage();
+        header = testContext.getPageObjectManager().getHeader();
+        about = testContext.getPageObjectManager().getAbout();
+        ourBrands = testContext.getPageObjectManager().getOurBrands();
+        ourPromises = testContext.getPageObjectManager().getOurPromises();
+        ourLeadership = testContext.getPageObjectManager().getOurLeadership();
+        devOps = testContext.getPageObjectManager().getDevOps();
+        digitalTransformation = testContext.getPageObjectManager().getDigitalTransformation();
+        mobilityAndTransformation = testContext.getPageObjectManager().getMobilityAndTransformation();
+        remoteDiagnosticsMonitoringAndPredictiveMaintenance = testContext.getPageObjectManager().getRemoteDiagnosticsMonitoringAndPredictiveMaintenance();
+        sDaaS = testContext.getPageObjectManager().getsDaaS();
+        softwareIntegrationAndFLaaS = testContext.getPageObjectManager().getSoftwareIntegrationAndFLaaS();
+        smartApplications = testContext.getPageObjectManager().getSmartApplications();
+        modularityServices = testContext.getPageObjectManager().getModularityServices();
+        itInfrastructure = testContext.getPageObjectManager().getItInfrastructure();
+        consultancy = testContext.getPageObjectManager().getConsultancy();
+        applicationModernization = testContext.getPageObjectManager().getApplicationModernization();
+        applicationManagement = testContext.getPageObjectManager().getApplicationManagement();
+        applicationDevelopment = testContext.getPageObjectManager().getApplicationDevelopment();
+        services = testContext.getPageObjectManager().getServices();
+        customers = testContext.getPageObjectManager().getCustomers();
+        nearsurance = testContext.getPageObjectManager().getNearsurance();
+        resources = testContext.getPageObjectManager().getResources();
+        blog = testContext.getPageObjectManager().getBlog();
+        whitePapers = testContext.getPageObjectManager().getWhitePapers();
+        successStories = testContext.getPageObjectManager().getSuccessStories();
+        careers = testContext.getPageObjectManager().getCareers();
+        aboutICTGroup = testContext.getPageObjectManager().getAboutICTGroup();
+        contact = testContext.getPageObjectManager().getContact();
+        searchResult = testContext.getPageObjectManager().getSearchResult();
     }
 
     @Given("John is on the home page")
     public void john_is_on_the_home_page() {
-        driver.get(homePageUrl);
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(homePageUrl, currentUrl);
+        homePage.navigateToHomepage();
+        String currentUrl = homePage.getCurrentUrl();
+        Assertions.assertEquals(homePage.homePageUrl, currentUrl);
         System.out.println(currentUrl);
-        System.out.println(homePageUrl);
+        System.out.println(homePage.homePageUrl);
     }
 
     @When("he clicks on the about button")
@@ -211,7 +266,7 @@ public class headerStepDefinitions extends Base {
 
     @When("he types something in the search input field")
     public void he_types_in_the_search_input_field() {
-        header.enterSearchInput(searchInput);
+        header.enterSearchInput(testContext.getPageObjectManager().getSearchInput());
     }
 
     @When("presses enter")
@@ -267,8 +322,8 @@ public class headerStepDefinitions extends Base {
 
     @Then("he should be redirected to the about page")
     public void he_should_be_redirected_to_the_about_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(aboutPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = about.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getAboutPageUrl(), currentUrl.toLowerCase());
         Assertions.assertTrue(about.getBackGroundTextLocator());
     }
 
@@ -292,24 +347,24 @@ public class headerStepDefinitions extends Base {
 
     @Then("he is redirected to the our brands page")
     public void he_is_redirected_to_the_our_brands_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(ourBrandsPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = ourBrands.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getOurBrandsPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(ourBrands.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the our promises page")
     public void he_is_redirected_to_the_our_promises_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(ourPromisesPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = ourPromises.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getOurPromisesPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(ourPromises.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the our leadership page")
     public void he_is_redirected_to_the_our_leadership_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(ourLeadershipPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = ourLeadership.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getOurLeadershipPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(ourLeadership.getBackGroundTextLocator());
     }
 
@@ -357,64 +412,64 @@ public class headerStepDefinitions extends Base {
 
     @Then("he is redirected to the Devops page")
     public void he_is_redirected_to_the_devops_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(devOpsPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = devOps.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getDevOpsPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(devOps.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Digital transformation page")
     public void he_is_redirected_to_the_digital_transformation_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(digitalTransformationPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = digitalTransformation.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getDigitalTransformationPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(digitalTransformation.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Mobility and Transportation page")
     public void he_is_redirected_to_the_mobility_and_transportation_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(mobilityAndTransporationPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = mobilityAndTransformation.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getMobilityAndTransporationPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(mobilityAndTransformation.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Remote Diagnostics, Monitoring and Predictive Maintenance page")
     public void he_is_redirected_to_the_remote_diagnostics_monitoring_and_predictive_maintenance_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(remoteDiagnosticsMonitoringAndPredictiveMaintenancePageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = remoteDiagnosticsMonitoringAndPredictiveMaintenance.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getRemoteDiagnosticsMonitoringAndPredictiveMaintenancePageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(remoteDiagnosticsMonitoringAndPredictiveMaintenance.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the SDaaS page")
     public void he_is_redirected_to_the_s_daa_s_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(sdaasPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = sDaaS.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getSdaasPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(sDaaS.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Software Integration and FLaaS page")
     public void he_is_redirected_to_the_software_integration_and_f_laa_s_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(softwareIntegrationAndFlaasPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = softwareIntegrationAndFLaaS.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getSoftwareIntegrationAndFlaasPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(softwareIntegrationAndFLaaS.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Smart applications page")
     public void he_is_redirected_to_the_smart_applications_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(smartApplicationsPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = smartApplications.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getSmartApplicationsPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(smartApplications.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Modularity Services page")
     public void he_is_redirected_to_the_modularity_services_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(modularityServicesPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = modularityServices.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getModularityServicesPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(modularityServices.getBackGroundTextLocator());
     }
 
@@ -426,8 +481,8 @@ public class headerStepDefinitions extends Base {
 
     @Then("he is redirected to the IT Infrastructure page")
     public void he_is_redirected_to_the_it_infrastructure_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(itInfrastructurePageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = itInfrastructure.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getItInfrastructurePageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(itInfrastructure.getBackGroundTextLocator());
     }
 
@@ -438,8 +493,8 @@ public class headerStepDefinitions extends Base {
 
     @Then("he is redirected to the Consultancy page")
     public void he_is_redirected_to_the_consultancy_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(consultancyPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = consultancy.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getConsultancyPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(consultancy.getBackGroundTextLocator());
     }
 
@@ -460,52 +515,52 @@ public class headerStepDefinitions extends Base {
 
     @Then("he is redirected to the Application modernization page")
     public void he_is_redirected_to_the_application_modernization_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(applicationModernizationPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = applicationModernization.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getApplicationModernizationPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(applicationModernization.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Application management page")
     public void he_is_redirected_to_the_application_management_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(applicationManagementPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = applicationManagement.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getApplicationManagementPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(applicationManagement.getBackGroundTextLocator());
     }
 
 
     @Then("he is redirected to the Application development page")
     public void he_is_redirected_to_the_application_development_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(applicationDevelopmentPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = applicationDevelopment.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getApplicationDevelopmentPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(applicationDevelopment.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the services page")
     public void he_should_be_redirected_to_the_services_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(servicesPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = services.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getServicesPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(services.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the customers page")
     public void he_should_be_redirected_to_the_customers_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(customersPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = customers.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getCustomersPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(customers.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the nearsurance page")
     public void he_should_be_redirected_to_the_nearsurance_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(nearsurancePageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = nearsurance.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getNearsurancePageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(nearsurance.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the resources page")
     public void he_should_be_redirected_to_the_resources_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(resourcesPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = resources.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getResourcesPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(resources.getBackGroundTextLocator());
     }
 
@@ -526,51 +581,51 @@ public class headerStepDefinitions extends Base {
 
     @Then("he is redirected to the Blog page")
     public void he_is_redirected_to_the_blog_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(blogPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = blog.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getBlogPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(blog.getBackGroundTextLocator());
     }
 
     @Then("he is redirected to the Whitepapers page")
     public void he_is_redirected_to_the_whitepapers_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(whitepapersPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = whitePapers.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getWhitepapersPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(whitePapers.getBackGroundTextLocator());
     }
 
     @Then("he is redirected to the Success Stories page")
     public void he_is_redirected_to_the_success_stories_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(successStoriesPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = successStories.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getSuccessStoriesPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(successStories.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the careers page")
     public void he_should_be_redirected_to_the_careers_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(careersPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = careers.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getCareersPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(careers.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the about ICT Group page")
     public void he_should_be_redirected_to_the_about_ict_group_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(aboutICTGroupPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = aboutICTGroup.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getAboutICTGroupPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(aboutICTGroup.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the contact page")
     public void he_should_be_redirected_to_the_contact_page() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(contactPageUrl.toLowerCase(), currentUrl.toLowerCase());
+        String currentUrl = contact.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getContactPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(contact.getBackGroundTextLocator());
     }
 
     @Then("he should be redirected to the search page with the something results")
     public void he_should_be_redirected_to_the_search_page_with_the_results() {
-        String currentUrl = driver.getCurrentUrl();
-        Assertions.assertEquals(searchResultPageUrl.toLowerCase(), currentUrl.toLowerCase());
-        Assertions.assertTrue(header.searchMessageText().contains(searchInput));
+        String currentUrl = searchResult.getCurrentUrl();
+        Assertions.assertEquals(testContext.getPageObjectManager().getSearchResultPageUrl().toLowerCase(), currentUrl.toLowerCase());
+        Assertions.assertTrue(header.searchMessageText().contains(testContext.getPageObjectManager().getSearchInput()));
     }
 
 }

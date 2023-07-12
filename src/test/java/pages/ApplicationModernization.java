@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ApplicationModernization extends Base {
+public class ApplicationModernization {
 
     WebDriver driver;
 
@@ -21,4 +21,7 @@ public class ApplicationModernization extends Base {
         return backgroundTextLocator.isDisplayed();
     }
 
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
 }

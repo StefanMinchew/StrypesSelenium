@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class OurLeadership extends Base {
+public class OurLeadership {
 
     WebDriver driver;
 
@@ -19,6 +19,10 @@ public class OurLeadership extends Base {
 
     public Boolean getBackGroundTextLocator() {
         return backgroundTextLocator.isDisplayed();
+    }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
     }
 
 }
