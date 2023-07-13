@@ -15,4 +15,5 @@ public class SearchResult {
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
+
 }

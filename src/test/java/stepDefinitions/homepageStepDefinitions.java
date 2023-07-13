@@ -30,7 +30,6 @@ public class homepageStepDefinitions {
         homePage.navigateToHomepage();
     }
 
-
     @When("he clicks on the top section learn more button")
     public void he_clicks_on_the_top_section_learn_more_button() {
         homePage.clickOnTheTopSectionLearnMoreButton();

@@ -221,7 +221,6 @@ public class headerStepDefinitions {
         header.clickOnTheResourcesButton();
     }
 
-
     @When("he hovers over the resources button")
     public void he_hovers_over_the_resources_button() {
         header.hoversOverTheResourcesButton();
@@ -262,14 +261,9 @@ public class headerStepDefinitions {
         header.clickOnTheSearchButton();
     }
 
-    @When("he types something in the search input field")
-    public void he_types_in_the_search_input_field() {
+    @When("he presses enter after he has typed something in the search input field")
+    public void he_presses_enter_after_he_has_typed_something_in_the_search_input_field() {
         header.enterSearchInput(testContext.getPageObjectManager().getSearchInput());
-    }
-
-    @When("presses enter")
-    public void presses_enter() {
-        header.searchInputPressEnter();
     }
 
     @Then("he sees about")
@@ -316,7 +310,6 @@ public class headerStepDefinitions {
     public void he_sees_search() {
         Assertions.assertTrue(header.searchIsDisplayed());
     }
-
 
     @Then("he should be redirected to the about page")
     public void he_should_be_redirected_to_the_about_page() {
@@ -407,14 +400,12 @@ public class headerStepDefinitions {
         Assertions.assertTrue(header.modularityServicesIsDisplayed());
     }
 
-
     @Then("he is redirected to the Devops page")
     public void he_is_redirected_to_the_devops_page() {
         String currentUrl = devOps.getCurrentUrl();
         Assertions.assertEquals(testContext.getPageObjectManager().getDevOpsPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(devOps.getBackGroundTextLocator());
     }
-
 
     @Then("he is redirected to the Digital transformation page")
     public void he_is_redirected_to_the_digital_transformation_page() {
@@ -423,14 +414,12 @@ public class headerStepDefinitions {
         Assertions.assertTrue(digitalTransformation.getBackGroundTextLocator());
     }
 
-
     @Then("he is redirected to the Mobility and Transportation page")
     public void he_is_redirected_to_the_mobility_and_transportation_page() {
         String currentUrl = mobilityAndTransformation.getCurrentUrl();
         Assertions.assertEquals(testContext.getPageObjectManager().getMobilityAndTransporationPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(mobilityAndTransformation.getBackGroundTextLocator());
     }
-
 
     @Then("he is redirected to the Remote Diagnostics, Monitoring and Predictive Maintenance page")
     public void he_is_redirected_to_the_remote_diagnostics_monitoring_and_predictive_maintenance_page() {
@@ -439,14 +428,12 @@ public class headerStepDefinitions {
         Assertions.assertTrue(remoteDiagnosticsMonitoringAndPredictiveMaintenance.getBackGroundTextLocator());
     }
 
-
     @Then("he is redirected to the SDaaS page")
     public void he_is_redirected_to_the_s_daa_s_page() {
         String currentUrl = sDaaS.getCurrentUrl();
         Assertions.assertEquals(testContext.getPageObjectManager().getSdaasPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(sDaaS.getBackGroundTextLocator());
     }
-
 
     @Then("he is redirected to the Software Integration and FLaaS page")
     public void he_is_redirected_to_the_software_integration_and_f_laa_s_page() {
@@ -455,7 +442,6 @@ public class headerStepDefinitions {
         Assertions.assertTrue(softwareIntegrationAndFLaaS.getBackGroundTextLocator());
     }
 
-
     @Then("he is redirected to the Smart applications page")
     public void he_is_redirected_to_the_smart_applications_page() {
         String currentUrl = smartApplications.getCurrentUrl();
@@ -463,14 +449,12 @@ public class headerStepDefinitions {
         Assertions.assertTrue(smartApplications.getBackGroundTextLocator());
     }
 
-
     @Then("he is redirected to the Modularity Services page")
     public void he_is_redirected_to_the_modularity_services_page() {
         String currentUrl = modularityServices.getCurrentUrl();
         Assertions.assertEquals(testContext.getPageObjectManager().getModularityServicesPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(modularityServices.getBackGroundTextLocator());
     }
-
 
     @Then("he should see the IT Infrastructure submenu")
     public void he_should_see_the_it_infrastructure_submenu() {
@@ -518,14 +502,12 @@ public class headerStepDefinitions {
         Assertions.assertTrue(applicationModernization.getBackGroundTextLocator());
     }
 
-
     @Then("he is redirected to the Application management page")
     public void he_is_redirected_to_the_application_management_page() {
         String currentUrl = applicationManagement.getCurrentUrl();
         Assertions.assertEquals(testContext.getPageObjectManager().getApplicationManagementPageUrl().toLowerCase(), currentUrl.toLowerCase());
         Assertions.assertTrue(applicationManagement.getBackGroundTextLocator());
     }
-
 
     @Then("he is redirected to the Application development page")
     public void he_is_redirected_to_the_application_development_page() {

@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Homepage {
 
-
     WebDriver driver;
     PageObjectManager pageObjectManager = new PageObjectManager(driver);
 
@@ -66,43 +65,43 @@ public class Homepage {
     @FindBy(css = "[cta_dest_link]")
     WebElement getInTouchButtonLocator;
 
-    public Boolean elementorTopSectionIsDisplayed() {
+    public boolean elementorTopSectionIsDisplayed() {
         return elementorTopSectionLocator.isDisplayed();
     }
 
-    public Boolean whoAreWeSectionLocatorIsDisplayed() {
+    public boolean whoAreWeSectionLocatorIsDisplayed() {
         return whoAreWeSectionLocator.isDisplayed();
     }
 
-    public Boolean ourServicesSectionLocatorIsDisplayed() {
+    public boolean ourServicesSectionLocatorIsDisplayed() {
         return ourServicesSectionLocator.isDisplayed();
     }
 
-    public Boolean softwareSolutionsSectionLocatorIsDisplayed() {
+    public boolean softwareSolutionsSectionLocatorIsDisplayed() {
         return softwareSolutionsSectionLocator.isDisplayed();
     }
 
-    public Boolean nearsuranceSectionLocatorIsDisplayed() {
+    public boolean nearsuranceSectionLocatorIsDisplayed() {
         return nearsuranceSectionLocator.isDisplayed();
     }
 
-    public Boolean statisticsSectionLocatorIsDisplayed() {
+    public boolean statisticsSectionLocatorIsDisplayed() {
         return statisticsSectionLocator.isDisplayed();
     }
 
-    public Boolean partnersSectionLocatorIsDisplayed() {
+    public boolean partnersSectionLocatorIsDisplayed() {
         return partnersSectionLocator.isDisplayed();
     }
 
-    public Boolean whatIsNewSectionLocatorIsDisplayed() {
+    public boolean whatIsNewSectionLocatorIsDisplayed() {
         return whatIsNewSectionLocator.isDisplayed();
     }
 
-    public Boolean learnMoreSectionLocatorIsDisplayed() {
+    public boolean learnMoreSectionLocatorIsDisplayed() {
         return learnMoreSectionLocator.isDisplayed();
     }
 
-    public Boolean certificationsSectionIsDisplayed() {
+    public boolean certificationsSectionIsDisplayed() {
         return certificationsSectionLocator.isDisplayed();
     }
 
@@ -115,8 +114,13 @@ public class Homepage {
     }
 
     public void clickOnTheTopSectionLearnMoreButton() {
-        Actions actions = new Actions(driver);
-        actions.moveToElement(topSectionLearnMoreButtonLocator).click().perform();
+        try{
+            Actions actions = new Actions(driver);
+            actions.moveToElement(topSectionLearnMoreButtonLocator).click().perform();
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void clickOnTheWhoAreWeLearnMoreButton() {

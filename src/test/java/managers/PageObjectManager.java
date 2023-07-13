@@ -41,12 +41,8 @@ public class PageObjectManager {
     private AboutICTGroup aboutICTGroup;
     private Contact contact;
     private SearchResult searchResult;
-
-
     private String searchInput = "Strypes";
-
     private String baseUrl = FileReaderManager.getInstance().getConfigReader().getApplicationUrl();
-
     private String searchResultPageUrl = baseUrl + "?s=" + searchInput;
     private String homePageUrl = baseUrl;
     private String aboutPageUrl = baseUrl + "about-strypes/";
