@@ -1,7 +1,7 @@
 @Homepage
 Feature: Homepage tests
 
-  @Test @Regression
+  @Test @Regression @UI
   Scenario Outline: User can see <elementor> section
     Given John is already on the page
     Then he can see the <elementor> section
@@ -18,7 +18,7 @@ Feature: Homepage tests
       | learn more        |
       | certifications    |
 
-  @Test @Regression
+  @Test @Regression @Functionality @Button
   Scenario Outline:  User is redirected to the <page> page after clicking on the <button> button
     Given John is already on the page
     When he clicks on the <button> button

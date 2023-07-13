@@ -11,6 +11,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverManager {
+
     private WebDriver driver;
     private static DriverType driverType;
     private static EnvironmentType environmentType;
@@ -88,7 +89,7 @@ public class WebDriverManager {
     }
 
     public void closeDriver() {
-        driver.close();
         driver.quit();
     }
+
 }

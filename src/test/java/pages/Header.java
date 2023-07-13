@@ -162,7 +162,6 @@ public class Header {
         return ourLeadershipFromAboutSubmenuLocator.isDisplayed();
     }
 
-
     public void clickOnTheAboutButton() {
         aboutButtonLocator.click();
     }
@@ -369,11 +368,12 @@ public class Header {
     }
 
     public void enterSearchInput(String input) {
-        searchInputFieldLocator.sendKeys(input);
-    }
-
-    public void searchInputPressEnter() {
-        searchInputFieldLocator.sendKeys(Keys.ENTER);
+        try {
+            searchInputFieldLocator.sendKeys(input, Keys.ENTER);
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public String searchMessageText() {
