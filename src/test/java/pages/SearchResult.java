@@ -1,11 +1,16 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchResult {
 
-    WebDriver driver;
+    private WebDriver driver;
+
+    @FindBy(css = ".elementor-heading-title")
+    protected WebElement searchResultsMessageLocator;
 
     public SearchResult(WebDriver driver) {
         this.driver = driver;
@@ -16,4 +21,7 @@ public class SearchResult {
         return driver.getCurrentUrl();
     }
 
+    public String searchMessageText() {
+        return searchResultsMessageLocator.getText();
+    }
 }

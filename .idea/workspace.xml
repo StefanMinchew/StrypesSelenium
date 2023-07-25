@@ -4,14 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c7f27f1-e42e-4f81-826c-5bf42eaae9de" name="Changes" comment="Added few homepage tests, formatted code and few optimizations">
+    <list default="true" id="5c7f27f1-e42e-4f81-826c-5bf42eaae9de" name="Changes" comment="Fixed firefox flakiness for few tests, formatted and refactored code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataProviders/ConfigFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataProviders/ConfigFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/managers/PageObjectManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/managers/PageObjectManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/managers/WebDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/managers/WebDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/Configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/configs/Configuration.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/About.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/About.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/AboutICTGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/AboutICTGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ApplicationDevelopment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ApplicationDevelopment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ApplicationManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ApplicationManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ApplicationModernization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ApplicationModernization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Careers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Careers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Consultancy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Consultancy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Contact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Contact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Customers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Customers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DevOps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DevOps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/DigitalTransformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/DigitalTransformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Header.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/Homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ITInfrastructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ITInfrastructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MobilityAndTransformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MobilityAndTransformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ModularityServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ModularityServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Nearsurance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Nearsurance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OurBrands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OurBrands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OurLeadership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OurLeadership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/OurPromises.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/OurPromises.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/RemoteDiagnosticsMonitoringAndPredictiveMaintenance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/RemoteDiagnosticsMonitoringAndPredictiveMaintenance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Resources.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Resources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SDaaS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SDaaS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/SearchResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SearchResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SmartApplications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SmartApplications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SoftwareIntegrationAndFLaaS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SoftwareIntegrationAndFLaaS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/SuccessStories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SuccessStories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/WhitePapers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/WhitePapers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/headerStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/headerStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/homepageStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/homepageStepDefinitions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/header.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/header.feature" afterDir="false" />
@@ -149,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689175351619</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fixed firefox flakiness for few tests, formatted and refactored code">
+      <created>1689239982951</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689239982951</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -157,6 +189,7 @@
     <MESSAGE value="Finish header tests" />
     <MESSAGE value="Refactored code and added first homepage tests" />
     <MESSAGE value="Added few homepage tests, formatted code and few optimizations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added few homepage tests, formatted code and few optimizations" />
+    <MESSAGE value="Fixed firefox flakiness for few tests, formatted and refactored code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed firefox flakiness for few tests, formatted and refactored code" />
   </component>
 </project>

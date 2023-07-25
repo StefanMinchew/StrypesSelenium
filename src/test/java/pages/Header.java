@@ -8,103 +8,100 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Header {
 
-    WebDriver driver;
+    private WebDriver driver;
 
     public Header(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) [class='attachment-large size-large wp-image-18 astra-logo-svg']")
-    WebElement logoButtonLocator;
+    @FindBy(xpath = "//img[@alt='Strypes logo']")
+    protected WebElement logoButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1250'] [aria-haspopup]")
-    WebElement aboutButtonLocator;
+    @FindBy(css = ".menu-item-1250")
+    protected WebElement aboutButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-45'] > [aria-haspopup]")
-    WebElement servicesButtonLocator;
+    @FindBy(css = ".menu-item-45")
+    protected WebElement servicesButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-52'] .elementor-item")
-    WebElement customersButtonLocator;
+    @FindBy(css = ".menu-item-52")
+    protected WebElement customersButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-749'] .elementor-item")
-    WebElement nearsuranceButtonLocator;
+    @FindBy(css = ".menu-item-749")
+    protected WebElement nearsuranceButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2634'] [aria-haspopup]")
-    WebElement resourcesButtonLocator;
+    @FindBy(css = ".menu-item-2634")
+    protected WebElement resourcesButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='careers-menu menu-item menu-item-type-custom menu-item-object-custom menu-item-79'] .elementor-item")
-    WebElement careersButtonLocator;
+    @FindBy(css = ".menu-item-79")
+    protected WebElement careersButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-60'] .elementor-item")
-    WebElement ictGroupButtonLocator;
+    @FindBy(css = ".menu-item-60")
+    protected WebElement ictGroupButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-62'] .elementor-item")
-    WebElement contactButtonLocator;
+    @FindBy(css = ".menu-item-62")
+    protected WebElement contactButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) [data-id='41303580'] .fa-search")
-    WebElement searchButtonLocator;
+    @FindBy(css = ".elementor-search-form")
+    protected WebElement searchButtonLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-66'] .elementor-sub-item")
-    WebElement ourBrandsFromAboutSubmenuLocator;
+    @FindBy(css = ".menu-item-66")
+    protected WebElement ourBrandsFromAboutSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-807'] .elementor-sub-item")
-    WebElement ourPromisesFromAboutSubmenuLocator;
+    @FindBy(css = ".menu-item-807")
+    protected WebElement ourPromisesFromAboutSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-1731'] .elementor-sub-item")
-    WebElement ourLeadershipFromAboutSubmenuLocator;
+    @FindBy(css = ".menu-item-1731")
+    protected WebElement ourLeadershipFromAboutSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2248'] [aria-haspopup]")
-    WebElement devOpsFromServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2248")
+    protected WebElement devOpsFromServicesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-797'] [aria-haspopup]")
-    WebElement digitalTransformationFromServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-797")
+    protected WebElement digitalTransformationFromServicesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-799'] .elementor-sub-item")
-    WebElement mobilityAndTransportationFromServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-799")
+    protected WebElement mobilityAndTransportationFromServicesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-1863'] .elementor-sub-item")
-    WebElement remoteDiagnosticsMonitoringAndPredictiveMaintenanceFromServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-1863")
+    protected WebElement remoteDiagnosticsMonitoringAndPredictiveMaintenanceFromServicesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-2481'] .elementor-sub-item")
-    WebElement SDaaSFromServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2481")
+    protected WebElement SDaaSFromServicesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-2487'] .elementor-sub-item")
-    WebElement softwareIntegrationAndFLaaSFromServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2487")
+    protected WebElement softwareIntegrationAndFLaaSFromServicesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2508'] [aria-haspopup]")
-    WebElement smartApplicationsFromServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2508")
+    protected WebElement smartApplicationsFromServicesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) .elementor-nav-menu--layout-horizontal [class='menu-item menu-item-type-post_type menu-item-object-page menu-item-1702'] .elementor-sub-item")
-    WebElement modularityServicesFromServicesSubmenuLocator;
+    @FindBy(linkText = "Modularity Services")
+    protected WebElement modularityServicesFromServicesSubmenuLocator;
 
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[3]/ul[@role='group']/li[1]/ul[@role='group']//a[@href='https://strypes.eu/devops/it-infrastructure-management/']")
-    WebElement itInfrastructureFromDevOpsServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2074")
+    protected WebElement itInfrastructureFromDevOpsServicesSubmenuLocator;
 
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[3]/ul[@role='group']/li[2]/ul[@role='group']//a[@href='https://strypes.eu/consultancy/']")
-    WebElement consultancyFromDigitalTransformationServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2493")
+    protected WebElement consultancyFromDigitalTransformationServicesSubmenuLocator;
 
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[3]/ul[@role='group']/li[7]/ul[@role='group']//a[@href='https://strypes.eu/smart-applications-the-intelligent-approach/application-modernization-staying-on-trend-ahead-of-time/']")
-    WebElement applicationModernizationFromSmartApplicationsServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2477")
+    protected WebElement applicationModernizationFromSmartApplicationsServicesSubmenuLocator;
 
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[3]/ul[@role='group']/li[7]/ul[@role='group']//a[@href='https://strypes.eu/smart-applications-the-intelligent-approach/application-management-maintaining-advantage-always/']")
-    WebElement applicationManagementFromSmartApplicationsServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2478")
+    protected WebElement applicationManagementFromSmartApplicationsServicesSubmenuLocator;
 
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[3]/ul[@role='group']/li[7]/ul[@role='group']//a[@href='https://strypes.eu/smart-applications-the-intelligent-approach/application-development-our-core-competency/']")
-    WebElement applicationDevelopmentFromSmartApplicationsServicesSubmenuLocator;
+    @FindBy(css = ".menu-item-2479")
+    protected WebElement applicationDevelopmentFromSmartApplicationsServicesSubmenuLocator;
 
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[6]/ul[@role='group']//a[@href='https://strypes.eu/blog/']")
-    WebElement blogFromResourcesSubmenuLocator;
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[6]/ul[@role='group']//a[@href='https://strypes.eu/whitepapers/']")
-    WebElement whitepapersFromResourcesSubmenuLocator;
-    @FindBy(xpath = "/html//section[@id='header_pop']/div/div/div/section[2]/div/div[2]/div/div/div/nav[1]/ul[@class='elementor-nav-menu']/li[6]/ul[@role='group']//a[@href='https://strypes.eu/success-stories/']")
-    WebElement successStoriesFromResourcesSubmenuLocator;
+    @FindBy(css = ".menu-item-2522")
+    protected WebElement blogFromResourcesSubmenuLocator;
+    @FindBy(css = ".menu-item-2625")
+    protected WebElement whitepapersFromResourcesSubmenuLocator;
+    @FindBy(css = ".menu-item-2626")
+    protected WebElement successStoriesFromResourcesSubmenuLocator;
 
-    @FindBy(css = "[class] #header_pop:nth-of-type(1) [data-id='41303580'] [type]")
-    WebElement searchInputFieldLocator;
-
-    @FindBy(css = ".results-for .elementor-heading-title")
-    WebElement searchResultsMessageLocator;
+    @FindBy(css = ".elementor-search-form__input")
+    protected WebElement searchInputFieldLocator;
 
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
@@ -150,6 +147,32 @@ public class Header {
         return searchButtonLocator.isDisplayed();
     }
 
+    public boolean isNavigationLinksDisplayed(String links) {
+        if (links.equals("logo")) {
+            return this.logoIsDisplayed();
+        } else if (links.equals("about")) {
+            return this.aboutIsDisplayed();
+        } else if (links.equals("services")) {
+            return this.servicesIsDisplayed();
+        } else if (links.equals("customers")) {
+            return this.customersIsDisplayed();
+        } else if (links.equals("nearsurance")) {
+            return this.nearsurranceIsDisplayed();
+        } else if (links.equals("resources")) {
+            return this.resourcesIsDisplayed();
+        } else if (links.equals("careers")) {
+            return this.careerIsDisplayed();
+        } else if (links.equals("ictgroup")) {
+            return this.ictGroupIsDisplayed();
+        } else if (links.equals("contact")) {
+            return this.contactIsDisplayed();
+        } else if (links.equals("search")) {
+            return this.searchIsDisplayed();
+        } else {
+            return false;
+        }
+    }
+
     public boolean ourBrandsIsDisplayed() {
         return ourBrandsFromAboutSubmenuLocator.isDisplayed();
     }
@@ -160,6 +183,18 @@ public class Header {
 
     public boolean ourLeadershipIsDisplayed() {
         return ourLeadershipFromAboutSubmenuLocator.isDisplayed();
+    }
+
+    public boolean isAboutSubmenuContentDisplayed(String content) {
+        if (content.equals("our brands")) {
+            return this.ourBrandsIsDisplayed();
+        } else if (content.equals("our promises")) {
+            return this.ourPromisesIsDisplayed();
+        } else if (content.equals("our leadership")) {
+            return this.ourLeadershipIsDisplayed();
+        } else {
+            return false;
+        }
     }
 
     public void clickOnTheAboutButton() {
@@ -226,6 +261,28 @@ public class Header {
         return modularityServicesFromServicesSubmenuLocator.isDisplayed();
     }
 
+    public boolean isServicesContentDisplayed(String content) {
+        if (content.equals("Devops")) {
+            return this.devOpsIsDisplayed();
+        } else if (content.equals("Digital transformation")) {
+            return this.digitalTransformationIsDisplayed();
+        } else if (content.equals("Mobility and Transportation")) {
+            return this.mobilityAndTransportationIsDisplayed();
+        } else if (content.equals("Remote Diagnostics, Monitoring and Predictive Maintenance")) {
+            return this.remoteDiagnosticsMonitoringAndPredictiveMaintenanceIsDisplayed();
+        } else if (content.equals("SDaaS")) {
+            return this.SDaaSIsDisplayed();
+        } else if (content.equals("Software Integration and FLaaS")) {
+            return this.softwareIntegrationAndFLaaSIsDisplayed();
+        } else if (content.equals("Smart applications")) {
+            return this.smartApplicationsIsDisplayed();
+        } else if (content.equals("Modularity Services")) {
+            return this.modularityServicesIsDisplayed();
+        } else {
+            return false;
+        }
+    }
+
     public void clickOnTheDevOpsOption() {
         devOpsFromServicesSubmenuLocator.click();
     }
@@ -271,7 +328,7 @@ public class Header {
         modularityServicesFromServicesSubmenuLocator.click();
     }
 
-    public Boolean itInfrastructureIsDisplayed() {
+    public boolean itInfrastructureIsDisplayed() {
         return itInfrastructureFromDevOpsServicesSubmenuLocator.isDisplayed();
     }
 
@@ -279,20 +336,32 @@ public class Header {
         itInfrastructureFromDevOpsServicesSubmenuLocator.click();
     }
 
-    public Boolean consultancyIsDisplayed() {
+    public boolean consultancyIsDisplayed() {
         return consultancyFromDigitalTransformationServicesSubmenuLocator.isDisplayed();
     }
 
-    public Boolean applicationModernizationIsDisplayed() {
+    public boolean applicationModernizationIsDisplayed() {
         return applicationModernizationFromSmartApplicationsServicesSubmenuLocator.isDisplayed();
     }
 
-    public Boolean applicationManagementIsDisplayed() {
+    public boolean applicationManagementIsDisplayed() {
         return applicationManagementFromSmartApplicationsServicesSubmenuLocator.isDisplayed();
     }
 
-    public Boolean applicationDevelopmentIsDisplayed() {
+    public boolean applicationDevelopmentIsDisplayed() {
         return applicationDevelopmentFromSmartApplicationsServicesSubmenuLocator.isDisplayed();
+    }
+
+    public boolean isSmartApplicationSubmenuContentDisplayed(String content) {
+        if (content.equals("Application modernization")) {
+            return this.applicationModernizationIsDisplayed();
+        } else if (content.equals("Application management")) {
+            return this.applicationManagementIsDisplayed();
+        } else if (content.equals("Application development")) {
+            return this.applicationDevelopmentIsDisplayed();
+        } else {
+            return false;
+        }
     }
 
     public void clickOnTheConsultancyOption() {
@@ -327,16 +396,28 @@ public class Header {
         resourcesButtonLocator.click();
     }
 
-    public Boolean blogIsDisplayed() {
+    public boolean blogIsDisplayed() {
         return blogFromResourcesSubmenuLocator.isDisplayed();
     }
 
-    public Boolean whitepapersIsDisplayed() {
+    public boolean whitepapersIsDisplayed() {
         return whitepapersFromResourcesSubmenuLocator.isDisplayed();
     }
 
-    public Boolean successStoriesIsDisplayed() {
+    public boolean successStoriesIsDisplayed() {
         return successStoriesFromResourcesSubmenuLocator.isDisplayed();
+    }
+
+    public boolean isResourcesSubmenuContentDisplayed(String content) {
+        if (content.equals("Blog")) {
+            return this.blogIsDisplayed();
+        } else if (content.equals("Whitepapers")) {
+            return this.whitepapersIsDisplayed();
+        } else if (content.equals("Success Stories")) {
+            return this.successStoriesIsDisplayed();
+        } else {
+            return false;
+        }
     }
 
     public void clickOnTheBlogOption() {
@@ -374,10 +455,6 @@ public class Header {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-    }
-
-    public String searchMessageText() {
-        return searchResultsMessageLocator.getText();
     }
 
 }

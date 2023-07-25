@@ -5,10 +5,8 @@ Feature: Header tests
     Given John is on the home page
 
   @Test @Regression @UI
-  Scenario Outline: <navigation> is displayed correctly
-    Then he sees <navigation>
-    Examples:
-      | navigation  |
+  Scenario: Navigation is displayed correctly
+    Then he sees the navigation links
       | logo        |
       | about       |
       | services    |
@@ -21,11 +19,9 @@ Feature: Header tests
       | search      |
 
   @Test @Regression @UI
-  Scenario Outline: About submenu displays <content>
+  Scenario: About submenu displays its content
     When he hovers over the about button
-    Then he should see <content> displayed
-    Examples:
-      | content        |
+    Then he should see the about submenu content displayed
       | our brands     |
       | our promises   |
       | our leadership |
@@ -57,11 +53,9 @@ Feature: Header tests
       | contact         |
 
   @Test @Regression @UI
-  Scenario Outline: Services submenu displays <content>
+  Scenario: Services submenu displays content
     When he hovers over the services button
-    Then he should see <content> displayed
-    Examples:
-      | content                                                   |
+    Then he should see the services submenu content displayed
       | Devops                                                    |
       | Digital transformation                                    |
       | Mobility and Transportation                               |
@@ -114,12 +108,10 @@ Feature: Header tests
     Then he is redirected to the Consultancy page
 
   @Test @Regression @UI
-  Scenario Outline: Smart applications submenu displays <content>
-    When he hovers over the services button
-    And he hovers over the Smart application button
-    Then he should see <content> displayed
-    Examples:
-      | content                   |
+  Scenario: Smart applications submenu displays its content
+    And he has already hovered over the services button
+    When he hovers over the Smart application button
+    Then he should see the smart application submenu content displayed
       | Application modernization |
       | Application management    |
       | Application development   |
@@ -137,11 +129,9 @@ Feature: Header tests
       | Application development   |
 
   @Test @Regression @UI
-  Scenario Outline: Resources submenu displays <content>
+  Scenario: Resources submenu displays its content
     When he hovers over the resources button
-    Then he should see <content> displayed
-    Examples:
-      | content         |
+    Then he should see the resources submenu content displayed
       | Blog            |
       | Whitepapers     |
       | Success Stories |

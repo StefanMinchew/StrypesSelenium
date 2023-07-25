@@ -2,28 +2,20 @@ package pages;
 
 import managers.PageObjectManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Careers {
 
-    WebDriver driver;
-    PageObjectManager pageObjectManager = new PageObjectManager(driver);
+    private WebDriver driver;
+    private PageObjectManager pageObjectManager = new PageObjectManager(driver);
 
-    public Careers(WebDriver driver){
+    public Careers(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "[data-id='4e64b89f'] .elementor-widget-container")
-    WebElement backgroundTextLocator;
-
     public void navigateToCareersPage() {
         driver.get(pageObjectManager.getCareersPageUrl());
-    }
-    public Boolean getBackGroundTextLocator() {
-        return backgroundTextLocator.isDisplayed();
     }
 
     public String getCurrentUrl() {
