@@ -9,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Homepage {
 
-    WebDriver driver;
-    PageObjectManager pageObjectManager = new PageObjectManager(driver);
+    private WebDriver driver;
+    private PageObjectManager pageObjectManager = new PageObjectManager(driver);
 
     public Homepage(WebDriver driver) {
         this.driver = driver;
@@ -18,91 +18,117 @@ public class Homepage {
     }
 
     @FindBy(css = "[data-id='db4b26e']")
-    WebElement elementorTopSectionLocator;
+    protected WebElement elementorTopSectionLocator;
 
-    @FindBy(css = "[data-id='4d8c7b6'] .elementor-widget-container")
-    WebElement certificationsSectionLocator;
+    @FindBy(css = "[data-id='4d8c7b6']")
+    protected WebElement certificationsSectionLocator;
 
-    @FindBy(css = "[data-id='913488e'] .elementor-column-gap-default")
-    WebElement learnMoreSectionLocator;
+    @FindBy(css = "[data-id='913488e']")
+    protected WebElement learnMoreSectionLocator;
 
     @FindBy(css = "[data-id='d55c3c4']")
-    WebElement whatIsNewSectionLocator;
+    protected WebElement whatIsNewSectionLocator;
 
-    @FindBy(css = "[data-id='362d62b8'] .elementor-element-populated")
-    WebElement partnersSectionLocator;
+    @FindBy(css = "[data-id='362d62b8']")
+    protected WebElement partnersSectionLocator;
 
     @FindBy(css = "[data-id='8519a1a']")
-    WebElement statisticsSectionLocator;
+    protected WebElement statisticsSectionLocator;
 
     @FindBy(css = "[data-id='2a0b1a6']")
-    WebElement nearsuranceSectionLocator;
+    protected WebElement nearsuranceSectionLocator;
 
-    @FindBy(css = "[data-id='83e6f43'] > div:nth-of-type(1)")
-    WebElement softwareSolutionsSectionLocator;
+    @FindBy(css = "[data-id='83e6f43']")
+    protected WebElement softwareSolutionsSectionLocator;
 
     @FindBy(css = "[data-id='33324c7']")
-    WebElement ourServicesSectionLocator;
+    protected WebElement ourServicesSectionLocator;
 
     @FindBy(css = "[data-id='d3973af']")
-    WebElement whoAreWeSectionLocator;
+    protected WebElement whoAreWeSectionLocator;
 
-    @FindBy(css = "[data-swiper-slide-index='0']:nth-of-type(7) .elementor-slide-button")
-    WebElement topSectionLearnMoreButtonLocator;
+    @FindBy(css = ".elementor-slide-button")
+    protected WebElement topSectionLearnMoreButtonLocator;
 
     @FindBy(css = "[data-id='9eedb11'] .elementor-button-text")
-    WebElement whoAreWeLearnMoreButtonLocator;
+    protected WebElement whoAreWeLearnMoreButtonLocator;
 
-    @FindBy(css = "[data-id='f8420fb'] [role]")
-    WebElement ourServicesLearnMoreButtonLocator;
+    @FindBy(css = ".elementor-button-wrapper > a[href=\"/services/\"]")
+    protected WebElement ourServicesLearnMoreButtonLocator;
 
-    @FindBy(css = "[data-id='0ee61bb'] [role]")
-    WebElement nearsuranceLearnMoreButtonLocator;
+    @FindBy(css = ".elementor-button-wrapper > a[href=\"https://strypes.eu/nearsurance/\"]")
+    protected WebElement nearsuranceLearnMoreButtonLocator;
 
-    @FindBy(css = "[data-id='eb94daa'] [role]")
-    WebElement whatIsNewLearnMoreButtonLocator;
+    @FindBy(css = ".elementor-button-wrapper > a[href=\"/blog/\"]")
+    protected WebElement whatIsNewLearnMoreButtonLocator;
 
-    @FindBy(css = "[cta_dest_link]")
-    WebElement getInTouchButtonLocator;
+    @FindBy(css = ".cta_button")
+    protected WebElement getInTouchButtonLocator;
 
     public boolean elementorTopSectionIsDisplayed() {
         return elementorTopSectionLocator.isDisplayed();
     }
 
-    public boolean whoAreWeSectionLocatorIsDisplayed() {
+    public boolean whoAreWeSectionIsDisplayed() {
         return whoAreWeSectionLocator.isDisplayed();
     }
 
-    public boolean ourServicesSectionLocatorIsDisplayed() {
+    public boolean ourServicesSectionIsDisplayed() {
         return ourServicesSectionLocator.isDisplayed();
     }
 
-    public boolean softwareSolutionsSectionLocatorIsDisplayed() {
+    public boolean softwareSolutionsSectionIsDisplayed() {
         return softwareSolutionsSectionLocator.isDisplayed();
     }
 
-    public boolean nearsuranceSectionLocatorIsDisplayed() {
+    public boolean nearsuranceSectionIsDisplayed() {
         return nearsuranceSectionLocator.isDisplayed();
     }
 
-    public boolean statisticsSectionLocatorIsDisplayed() {
+    public boolean statisticsSectionIsDisplayed() {
         return statisticsSectionLocator.isDisplayed();
     }
 
-    public boolean partnersSectionLocatorIsDisplayed() {
+    public boolean partnersSectionIsDisplayed() {
         return partnersSectionLocator.isDisplayed();
     }
 
-    public boolean whatIsNewSectionLocatorIsDisplayed() {
+    public boolean whatIsNewSectionIsDisplayed() {
         return whatIsNewSectionLocator.isDisplayed();
     }
 
-    public boolean learnMoreSectionLocatorIsDisplayed() {
+    public boolean learnMoreSectionIsDisplayed() {
         return learnMoreSectionLocator.isDisplayed();
     }
 
-    public boolean certificationsSectionIsDisplayed() {
+    public boolean certificationsIsDisplayed() {
         return certificationsSectionLocator.isDisplayed();
+    }
+
+    public boolean isHomePageDisplayed(String content) {
+        if (content.equals("hero section")) {
+            return this.elementorTopSectionIsDisplayed();
+        } else if (content.equals("who are we")) {
+            return this.whoAreWeSectionIsDisplayed();
+        } else if (content.equals("our services")) {
+            return this.ourServicesSectionIsDisplayed();
+        } else if (content.equals("software solution")) {
+            return this.softwareSolutionsSectionIsDisplayed();
+        } else if (content.equals("nearsurance")) {
+            return this.nearsuranceSectionIsDisplayed();
+        } else if (content.equals("statistics")) {
+            return this.statisticsSectionIsDisplayed();
+        } else if (content.equals("partners")) {
+            return this.partnersSectionIsDisplayed();
+        } else if (content.equals("whats new")) {
+            return this.whatIsNewSectionIsDisplayed();
+        } else if (content.equals("learn more")) {
+            return this.learnMoreSectionIsDisplayed();
+        } else if (content.equals("certifications")) {
+            return this.certificationsIsDisplayed();
+        } else {
+            return false;
+        }
     }
 
     public void navigateToHomepage() {
@@ -114,7 +140,7 @@ public class Homepage {
     }
 
     public void clickOnTheTopSectionLearnMoreButton() {
-        try{
+        try {
             Actions actions = new Actions(driver);
             actions.moveToElement(topSectionLearnMoreButtonLocator).click().perform();
             Thread.sleep(1000);

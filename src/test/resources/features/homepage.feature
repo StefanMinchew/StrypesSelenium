@@ -2,12 +2,10 @@
 Feature: Homepage tests
 
   @Test @Regression @UI
-  Scenario Outline: User can see <elementor> section
-    Given John is already on the page
-    Then he can see the <elementor> section
-    Examples:
-      | elementor         |
-      | top               |
+  Scenario: User can see the homepage correctly displayed
+    Given John is on the home page
+    Then he can see the homepage displayed
+      | hero section      |
       | who are we        |
       | our services      |
       | software solution |
